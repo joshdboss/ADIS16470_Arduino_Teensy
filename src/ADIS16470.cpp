@@ -94,8 +94,8 @@ int ADIS16470::select() {
 // Returns 1 when complete.
 ////////////////////////////////////////////////////////////////////////////
 int ADIS16470::deselect() {
-  SPI.endTransaction();
   digitalWrite(_CS, HIGH); // Set CS high to disable device
+  SPI.endTransaction();
   return (1);
 }
 

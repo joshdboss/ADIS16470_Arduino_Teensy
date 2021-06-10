@@ -54,7 +54,6 @@ ADIS16470 IMU(10,2,6); // Chip Select, Data Ready, Reset Pin Assignments
 void setup()
 {
     Serial.begin(115200); // Initialize serial output via USB
-    IMU.configSPI(); // Configure SPI communication
     delay(1000); // Give the part time to start up
     IMU.regWrite(MSC_CTRL, 0xC1);  // Enable Data Ready, set polarity
     IMU.regWrite(DEC_RATE, 0x00); // Set digital filter
